@@ -1,11 +1,18 @@
 import { GoogleGenAI } from "@google/genai";
 
-const apiKey = process.env.API_KEY || '';
-const ai = new GoogleGenAI({ apiKey });
+const apiKey = (import.meta.env.VITE_GEMINI_API_KEY as string) || '';
+let ai: GoogleGenAI | null = null;
+try {
+  if (apiKey) {
+    ai = new GoogleGenAI({ apiKey });
+  }
+} catch (_) {
+  // API key not configured
+}
 
 export const getGeminiResponse = async (userMessage: string): Promise<string> => {
-  if (!apiKey) {
-    return "Error: API Key no configurada. Por favor configura process.env.API_KEY.";
+  if (!apiKey || !ai) {
+    return "Error: API Key no configurada.";
   }
 
   try {

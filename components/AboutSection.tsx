@@ -7,24 +7,8 @@ const AboutSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="flex flex-col lg:flex-row items-center gap-12">
-          {/* Image Placeholder - Left on Desktop (row), Top on Mobile (col) */}
-          <div className="w-full lg:w-1/2 flex justify-center">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl aspect-[4/5] max-w-md w-full">
-              <img 
-                src="https://picsum.photos/600/800" 
-                alt="Ignacio teaching" 
-                className="object-cover w-full h-full transform hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/60 to-transparent flex items-end">
-                <p className="text-white p-6 font-semibold text-lg">
-                  "Aprender un idioma es abrir una puerta a un mundo nuevo."
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Text Content - Right on Desktop, Bottom on Mobile */}
-          <div className="w-full lg:w-1/2 prose prose-lg text-slate-600 text-justify">
+          {/* Text Content - Left on Desktop, Bottom on Mobile */}
+          <div className="w-full lg:w-2/5 prose prose-lg text-slate-600 text-justify order-2 lg:order-1">
             <p className="mb-6 text-lg leading-relaxed">
               ¡Hola, profe! Bienvenido a mi biblioteca de recursos. He creado este espacio para compartir contigo los recursos que he ido puliendo en mis clases durante años. Entra, busca y descarga lo que necesites para tus próximas clases.
             </p>
@@ -44,6 +28,17 @@ const AboutSection: React.FC = () => {
                 <span><strong>Recursos culturales:</strong> Ejercicios e ideas para trabajar la interculturalidad en el aula.</span>
               </li>
             </ul>
+          </div>
+
+          {/* Image - Right on Desktop, Top on Mobile */}
+          <div className="w-full lg:w-3/5 flex justify-center order-1 lg:order-2">
+            <div className="rounded-2xl overflow-hidden shadow-xl w-full">
+              <img 
+                src="images/SpanishwithIgnacio-pic.JPG" 
+                alt="Ignacio teaching" 
+                className="w-full h-auto block"
+              />
+            </div>
           </div>
         </div>
       </div>
