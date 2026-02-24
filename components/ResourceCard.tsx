@@ -72,7 +72,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, isFeatured = fals
             {resource.title}
         </h3>
         
-        <p className={`text-slate-600 mb-6 flex-1 ${isFeatured ? 'text-lg' : 'text-base'}`}>
+        <p className={`text-slate-600 mb-6 flex-1 text-justify ${isFeatured ? 'text-lg' : 'text-base'}`}>
             {resource.description}
         </p>
         
