@@ -7,32 +7,36 @@ const mockResources: Resource[] = [
   {
     id: 'cobi-spanish',
     title: 'CobiSpanish',
-    description: '¡Novedad! La plataforma que estoy diseñando para llevar tu español al siguiente nivel. Un espacio único de aprendizaje.',
-    category: 'Cultura',
+    description: 'Esta plataforma contiene juegos para que tus estudiantes practiquen vocabulario, conjugaciones y formación de oraciones. La página tiene una mascota, llamada Cobi, que acompaña al estudiante dándole consejos y contestando sus dudas.',
+    categories: ['Juegos', 'Vocabulario', 'Gramática'],
     level: 'Intermedio',
     imageUrl: 'https://picsum.photos/id/180/800/600'
   },
   {
     id: '1',
-    title: 'Guía Definitiva del Subjuntivo',
-    description: 'Aprende a usar el subjuntivo sin miedo con esta guía paso a paso y ejercicios prácticos.',
-    category: 'Gramática',
-    level: 'Intermedio',
-    imageUrl: 'https://picsum.photos/id/24/400/300'
+    title: 'Tabú de comida A1',
+    description: 'Este juego es un tabú de vocabulario de comida para niveles iniciales. Para que los alumnos tengan confianza para hablar, el recurso contiene una sección de ayuda comunicativa y otra con lista de palabras que pueden aparecer en el juego.',
+    categories: ['Vocabulario', 'Juegos'],
+    level: 'Principiante',
+    link: 'https://tabucomidaa1.spanishwithignacio.com/',
+    imageUrl: 'https://picsum.photos/id/24/400/300',
+    infoText: 'El juego Tabú consiste en lograr que tu equipo adivine una palabra clave antes de que se agote el tiempo, describiéndola sin pronunciar las "palabras tabú" prohibidas que aparecen en la tarjeta. Es un juego de velocidad y creatividad, donde el equipo contrario vigila si se mencionan las palabras prohibidas.'
   },
   {
     id: '2',
-    title: '100 verbos más usados',
-    description: 'Lista esencial de verbos para empezar a hablar desde el primer día.',
-    category: 'Vocabulario',
+    title: 'El Impostor',
+    description: 'Este recurso contiene una lista de palabras diseñada para estudiantes de nivel inicial. También da la opción de elegir las palabras que van a aparecer en el juego por si prefieres personalizarlo.',
+    categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
-    imageUrl: 'https://picsum.photos/id/30/400/300'
+    link: 'https://impostor.spanishwithignacio.com/',
+    imageUrl: 'https://picsum.photos/id/30/400/300',
+    infoText: 'El impostor es un juego colaborativo de deducción social donde todos los jugadores reciben una misma palabra secreta, excepto uno, que es el impostor. A través de pistas sutiles, los participantes deben identificar al mentiroso, mientras este intenta pasar desapercibido.'
   },
   {
     id: '3',
     title: 'La Cultura del Tapeo',
     description: 'Un vídeo explicativo sobre las costumbres gastronómicas en España.',
-    category: 'Cultura',
+    categories: ['Cultura'],
     level: 'Avanzado',
     imageUrl: 'https://picsum.photos/id/42/400/300'
   },
@@ -40,7 +44,7 @@ const mockResources: Resource[] = [
     id: '4',
     title: 'Ejercicios de "Por" y "Para"',
     description: 'Hojas de trabajo descargables para dominar estas dos preposiciones difíciles.',
-    category: 'Ejercicio',
+    categories: ['Ejercicio'],
     level: 'Intermedio',
     imageUrl: 'https://picsum.photos/id/50/400/300'
   },
@@ -48,7 +52,7 @@ const mockResources: Resource[] = [
     id: '5',
     title: 'Podcast: Viaje por Andalucía',
     description: 'Mejora tu comprensión auditiva con este episodio sobre el sur de España.',
-    category: 'Cultura',
+    categories: ['Cultura'],
     level: 'Intermedio',
     imageUrl: 'https://picsum.photos/id/60/400/300'
   },
@@ -56,7 +60,7 @@ const mockResources: Resource[] = [
     id: '6',
     title: 'Flashcards: La Casa',
     description: 'Tarjetas de vocabulario visual para aprender los objetos del hogar.',
-    category: 'Vocabulario',
+    categories: ['Vocabulario'],
     level: 'Principiante',
     imageUrl: 'https://picsum.photos/id/70/400/300'
   }

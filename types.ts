@@ -2,10 +2,11 @@ export interface Resource {
   id: string;
   title: string;
   description: string;
-  category: 'Gramática' | 'Vocabulario' | 'Cultura' | 'Ejercicio';
+  categories: string[];
   level: 'Principiante' | 'Intermedio' | 'Avanzado';
   link?: string;
   imageUrl?: string;
+  infoText?: string;
 }
 
 export interface ChatMessage {
