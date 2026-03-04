@@ -10,7 +10,7 @@ const mockResources: Resource[] = [
     description: 'Esta plataforma contiene juegos para que tus estudiantes practiquen vocabulario, conjugaciones y formación de oraciones. La página tiene una mascota, llamada Cobi, que acompaña al estudiante dándole consejos y contestando sus dudas.',
     categories: ['Juegos', 'Vocabulario', 'Gramática'],
     level: 'Intermedio',
-    imageUrl: 'https://picsum.photos/id/180/800/600'
+    imageUrl: 'images/cobispanish.png'
   },
   {
     id: '1',
@@ -19,7 +19,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
     link: 'https://tabucomidaa1.spanishwithignacio.com/',
-    imageUrl: 'https://picsum.photos/id/24/400/300',
+    imageUrl: 'images/Tabu_comida.png',
     infoText: 'El juego Tabú consiste en lograr que tu equipo adivine una palabra clave antes de que se agote el tiempo, describiéndola sin pronunciar las "palabras tabú" prohibidas que aparecen en la tarjeta. Es un juego de velocidad y creatividad, donde el equipo contrario vigila si se mencionan las palabras prohibidas.'
   },
   {
@@ -29,7 +29,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
     link: 'https://impostor.spanishwithignacio.com/',
-    imageUrl: 'https://picsum.photos/id/30/400/300',
+    imageUrl: 'images/Impostor.png',
     infoText: 'El impostor es un juego colaborativo de deducción social donde todos los jugadores reciben una misma palabra secreta, excepto uno, que es el impostor. A través de pistas sutiles, los participantes deben identificar al mentiroso, mientras este intenta pasar desapercibido.'
   },
   {
