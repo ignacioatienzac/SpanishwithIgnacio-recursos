@@ -1,6 +1,6 @@
 import React from 'react';
 import { Resource } from '../types';
-import { Download, ExternalLink, BookOpen, Video, Star, Info, Gamepad2 } from 'lucide-react';
+import { ExternalLink, ArrowRight, BookOpen, Video, Star, Info, Gamepad2 } from 'lucide-react';
 
 interface ResourceCardProps {
   resource: Resource;
@@ -84,7 +84,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, isFeatured = fals
           rel={resource.link ? 'noopener noreferrer' : undefined}
           className={`flex items-center justify-center px-4 py-2 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-brand-blue hover:bg-slate-800 transition-colors ${isFeatured ? 'w-fit px-8 py-3 text-base' : 'w-full mt-auto'}`}
         >
-          <Download className="mr-2 h-4 w-4" />
+          {isFeatured ? <ArrowRight className="mr-2 h-4 w-4" /> : <ExternalLink className="mr-2 h-4 w-4" />}
           {isFeatured ? 'Acceder ahora' : 'Acceder al Recurso'}
         </a>
       </div>
