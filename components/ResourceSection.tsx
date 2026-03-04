@@ -10,7 +10,7 @@ const mockResources: Resource[] = [
     description: 'Esta plataforma contiene juegos para que tus estudiantes practiquen vocabulario, conjugaciones y formación de oraciones. La página tiene una mascota, llamada Cobi, que acompaña al estudiante dándole consejos y contestando sus dudas.',
     categories: ['Juegos', 'Vocabulario', 'Gramática'],
     level: 'Intermedio',
-    imageUrl: 'images/cobispanish.png'
+    imageUrl: 'images/cobispanish.jpg'
   },
   {
     id: '1',
@@ -19,7 +19,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
     link: 'https://tabucomidaa1.spanishwithignacio.com/',
-    imageUrl: 'images/Tabu_comida.png',
+    imageUrl: 'images/Tabu_comida.jpg',
     infoText: 'El juego Tabú consiste en lograr que tu equipo adivine una palabra clave antes de que se agote el tiempo, describiéndola sin pronunciar las "palabras tabú" prohibidas que aparecen en la tarjeta. Es un juego de velocidad y creatividad, donde el equipo contrario vigila si se mencionan las palabras prohibidas.'
   },
   {
@@ -29,7 +29,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
     link: 'https://impostor.spanishwithignacio.com/',
-    imageUrl: 'images/Impostor.png',
+    imageUrl: 'images/Impostor.jpg',
     infoText: 'El impostor es un juego colaborativo de deducción social donde todos los jugadores reciben una misma palabra secreta, excepto uno, que es el impostor. A través de pistas sutiles, los participantes deben identificar al mentiroso, mientras este intenta pasar desapercibido.'
   },
   {
@@ -39,7 +39,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Gramática', 'Cultura'],
     level: 'Intermedio',
     link: 'https://docs.google.com/presentation/d/1GkLMol51SzmxKyT7RQjo-v-KAM32KbuO/edit?usp=sharing&ouid=115887044329190664191&rtpof=true&sd=true',
-    imageUrl: 'images/Describe y adivina.png'
+    imageUrl: 'images/Describe y adivina.jpg'
   }
 ];
 
