@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { SectionId, Resource } from '../types';
 import ResourceCard from './ResourceCard';
-import { Filter } from 'lucide-react';
+import { Filter, Search } from 'lucide-react';
 
 const mockResources: Resource[] = [
   {
@@ -10,7 +10,7 @@ const mockResources: Resource[] = [
     description: 'Esta plataforma contiene juegos para que tus estudiantes practiquen vocabulario, conjugaciones y formación de oraciones. La página tiene una mascota, llamada Cobi, que acompaña al estudiante dándole consejos y contestando sus dudas.',
     categories: ['Juegos', 'Vocabulario', 'Gramática'],
     level: 'Intermedio',
-    imageUrl: 'images/cobispanish.jpg'
+    imageUrl: 'images/cobispanish.png'
   },
   {
     id: '1',
@@ -19,7 +19,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
     link: 'https://tabucomidaa1.spanishwithignacio.com/',
-    imageUrl: 'images/Tabu_comida.jpg',
+    imageUrl: 'images/Tabu_comida.png',
     infoText: 'El juego Tabú consiste en lograr que tu equipo adivine una palabra clave antes de que se agote el tiempo, describiéndola sin pronunciar las "palabras tabú" prohibidas que aparecen en la tarjeta. Es un juego de velocidad y creatividad, donde el equipo contrario vigila si se mencionan las palabras prohibidas.'
   },
   {
@@ -29,7 +29,7 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Juegos'],
     level: 'Principiante',
     link: 'https://impostor.spanishwithignacio.com/',
-    imageUrl: 'images/Impostor.jpg',
+    imageUrl: 'images/Impostor.png',
     infoText: 'El impostor es un juego colaborativo de deducción social donde todos los jugadores reciben una misma palabra secreta, excepto uno, que es el impostor. A través de pistas sutiles, los participantes deben identificar al mentiroso, mientras este intenta pasar desapercibido.'
   },
   {
@@ -39,12 +39,13 @@ const mockResources: Resource[] = [
     categories: ['Vocabulario', 'Gramática', 'Cultura'],
     level: 'Intermedio',
     link: 'https://docs.google.com/presentation/d/1GkLMol51SzmxKyT7RQjo-v-KAM32KbuO/edit?usp=sharing&ouid=115887044329190664191&rtpof=true&sd=true',
-    imageUrl: 'images/Describe y adivina.jpg'
+    imageUrl: 'images/Describe y adivina.png'
   }
 ];
 
 const ResourceSection: React.FC = () => {
-  const [filter, setFilter] = useState<'Todos' | 'Principiante' | 'Intermedio' | 'Avanzado'>('Todos');
+  const [categoryFilter, setCategoryFilter] = useState<string>('Todas');
+  const [searchQuery, setSearchQuery] = useState<string>('');
 
   // Separate the featured resource
   const featuredId = 'cobi-spanish';
@@ -52,7 +53,12 @@ const ResourceSection: React.FC = () => {
   const otherResources = mockResources.filter(r => r.id !== featuredId);
 
   // Apply filters
-  const isMatch = (r: Resource) => filter === 'Todos' || r.level === filter;
+  const isMatch = (r: Resource) => {
+    const matchesCategory = categoryFilter === 'Todas' || r.categories.includes(categoryFilter);
+    const query = searchQuery.trim().toLowerCase();
+    const matchesSearch = !query || r.title.toLowerCase().includes(query) || r.description.toLowerCase().includes(query);
+    return matchesCategory && matchesSearch;
+  };
   
   const showFeatured = featuredResource && isMatch(featuredResource);
   const filteredOthers = otherResources.filter(isMatch);
@@ -69,18 +75,33 @@ const ResourceSection: React.FC = () => {
             </h2>
           </div>
           
-          <div className="flex items-center space-x-2 bg-white p-2 rounded-lg shadow-sm border border-gray-200">
-            <Filter className="text-slate-400 w-5 h-5 ml-2" />
-            <select 
-              value={filter}
-              onChange={(e) => setFilter(e.target.value as any)}
-              className="form-select block w-full pl-3 pr-10 py-2 text-base border-none focus:outline-none focus:ring-0 sm:text-sm rounded-md text-slate-700 bg-transparent cursor-pointer font-medium"
-            >
-              <option value="Todos">Todos los niveles</option>
-              <option value="Principiante">Principiante</option>
-              <option value="Intermedio">Intermedio</option>
-              <option value="Avanzado">Avanzado</option>
-            </select>
+          <div className="flex items-center space-x-3 flex-wrap gap-y-3">
+            {/* Search by word */}
+            <div className="flex items-center space-x-2 bg-white p-2 rounded-lg shadow-sm border border-gray-200">
+              <Search className="text-slate-400 w-5 h-5 ml-2" />
+              <input
+                type="text"
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                placeholder="Buscar por palabra..."
+                className="block w-44 pl-2 pr-3 py-2 text-base border-none focus:outline-none focus:ring-0 sm:text-sm rounded-md text-slate-700 bg-transparent font-medium placeholder-slate-400"
+              />
+            </div>
+            {/* Category filter */}
+            <div className="flex items-center space-x-2 bg-white p-2 rounded-lg shadow-sm border border-gray-200">
+              <Filter className="text-slate-400 w-5 h-5 ml-2" />
+              <select 
+                value={categoryFilter}
+                onChange={(e) => setCategoryFilter(e.target.value)}
+                className="form-select block w-full pl-3 pr-10 py-2 text-base border-none focus:outline-none focus:ring-0 sm:text-sm rounded-md text-slate-700 bg-transparent cursor-pointer font-medium"
+              >
+                <option value="Todas">Todas las categorías</option>
+                <option value="Juegos">Juegos</option>
+                <option value="Gramática">Gramática</option>
+                <option value="Vocabulario">Vocabulario</option>
+                <option value="Cultura">Cultura</option>
+              </select>
+            </div>
           </div>
         </div>
 

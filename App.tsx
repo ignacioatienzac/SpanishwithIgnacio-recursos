@@ -3,7 +3,6 @@ import Header from './components/Header';
 import AboutSection from './components/AboutSection';
 import ResourceSection from './components/ResourceSection';
 import Footer from './components/Footer';
-import GeminiTutor from './components/GeminiTutor';
 import { SectionId } from './types';
 
 const App: React.FC = () => {
@@ -40,7 +39,6 @@ const App: React.FC = () => {
       </main>
 
       <Footer />
-      <GeminiTutor />
     </div>
   );
 };
