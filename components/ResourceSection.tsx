@@ -34,35 +34,12 @@ const mockResources: Resource[] = [
   },
   {
     id: '3',
-    title: 'La Cultura del Tapeo',
-    description: 'Un vídeo explicativo sobre las costumbres gastronómicas en España.',
-    categories: ['Cultura'],
-    level: 'Avanzado',
-    imageUrl: 'https://picsum.photos/id/42/400/300'
-  },
-  {
-    id: '4',
-    title: 'Ejercicios de "Por" y "Para"',
-    description: 'Hojas de trabajo descargables para dominar estas dos preposiciones difíciles.',
-    categories: ['Ejercicio'],
+    title: 'Describe y adivina',
+    description: 'Presentación con PowerPoint con 6 imágenes: 5 pertenecen a personajes famosos y 1 al profesor. Los alumnos deben describir a las personas que aparecen en las fotos y conectar descripciones en pasado con las imágenes (ideal para presentar el pretérito imperfecto). Puedes descargar la presentación para personalizarla.',
+    categories: ['Vocabulario', 'Gramática', 'Cultura'],
     level: 'Intermedio',
-    imageUrl: 'https://picsum.photos/id/50/400/300'
-  },
-  {
-    id: '5',
-    title: 'Podcast: Viaje por Andalucía',
-    description: 'Mejora tu comprensión auditiva con este episodio sobre el sur de España.',
-    categories: ['Cultura'],
-    level: 'Intermedio',
-    imageUrl: 'https://picsum.photos/id/60/400/300'
-  },
-  {
-    id: '6',
-    title: 'Flashcards: La Casa',
-    description: 'Tarjetas de vocabulario visual para aprender los objetos del hogar.',
-    categories: ['Vocabulario'],
-    level: 'Principiante',
-    imageUrl: 'https://picsum.photos/id/70/400/300'
+    link: 'https://docs.google.com/presentation/d/1GkLMol51SzmxKyT7RQjo-v-KAM32KbuO/edit?usp=sharing&ouid=115887044329190664191&rtpof=true&sd=true',
+    imageUrl: 'images/Describe y adivina.png'
   }
 ];
 
