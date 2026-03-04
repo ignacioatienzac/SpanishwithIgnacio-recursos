@@ -35,7 +35,7 @@ const mockResources: Resource[] = [
   {
     id: '3',
     title: 'Describe y adivina',
-    description: 'Presentación con PowerPoint con 6 imágenes: 5 pertenecen a personajes famosos y 1 al profesor. Los alumnos deben describir a las personas que aparecen en las fotos y conectar descripciones en pasado con las imágenes (ideal para presentar el pretérito imperfecto). Puedes descargar la presentación para personalizarla.',
+    description: 'Presentación con 6 imágenes: 5 de personajes famosos y 1 del profesor. Se puede usar para practicar vocabulario de descripción física o para presentar el pretérito imperfecto. Descarga la presentación para personalizarla.',
     categories: ['Vocabulario', 'Gramática', 'Cultura'],
     level: 'Intermedio',
     link: 'https://docs.google.com/presentation/d/1GkLMol51SzmxKyT7RQjo-v-KAM32KbuO/edit?usp=sharing&ouid=115887044329190664191&rtpof=true&sd=true',
