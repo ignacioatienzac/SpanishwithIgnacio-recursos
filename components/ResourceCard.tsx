@@ -28,6 +28,8 @@ const ResourceCard: React.FC<ResourceCardProps> = ({ resource, isFeatured = fals
          <img 
             src={resource.imageUrl || `https://picsum.photos/seed/${resource.id}/400/300`} 
             alt={resource.title}
+            loading={isFeatured ? 'eager' : 'lazy'}
+            decoding="async"
             className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
          />
          <div className="absolute top-4 right-4 flex flex-col items-end gap-2">
